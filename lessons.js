@@ -8,15 +8,15 @@ window.LESSONS = [
       { id: '01', file: '01-inflasi-daya-beli.md',   title: 'Inflasi & Daya Beli', available: true,  readTime: 15 },
       { id: '02', file: '02-compounding.md',         title: 'Compounding',         available: true,  readTime: 15 },
       { id: '03', file: '03-risk-vs-return.md',      title: 'Risk vs Return',      available: true,  readTime: 18 },
-      { id: '04', file: '04-time-horizon.md',        title: 'Time Horizon & Tujuan Keuangan', available: false }
+      { id: '04', file: '04-time-horizon.md',        title: 'Time Horizon & Tujuan Keuangan', available: true,  readTime: 16 }
     ]
   },
   {
     fase: 2,
     faseTitle: 'Fase 2 — Mengenal Aset',
     items: [
-      { id: '05', file: '05-saham.md',         title: 'Saham',                       available: false },
-      { id: '06', file: '06-obligasi-sbn.md',  title: 'Obligasi & SBN',              available: false },
+      { id: '05', file: '05-saham.md',         title: 'Saham',                       available: true,  readTime: 22 },
+      { id: '06', file: '06-obligasi-sbn.md',  title: 'Obligasi & SBN',              available: true,  readTime: 20 },
       { id: '07', file: '07-reksadana-etf.md', title: 'Reksadana & ETF',             available: false },
       { id: '08', file: '08-properti-emas-crypto.md', title: 'Properti, Emas, Crypto', available: false },
       { id: '09', file: '09-diversifikasi.md', title: 'Diversifikasi & Alokasi Aset',available: false }

@@ -1,5 +1,6 @@
 # Headless browser screenshots (dev only)
-web/.preview/
+.preview/
+web/
 
 # Python
 __pycache__/

@@ -313,7 +313,7 @@ async function loadLesson(id) {
   content.innerHTML = `<p style="color: var(--color-fg-muted);">Memuat lesson…</p>`;
 
   try {
-    const res = await fetch('../' + lesson.file + '?t=' + Date.now());
+    const res = await fetch('./' + lesson.file + '?t=' + Date.now());
     if (!res.ok) throw new Error('Failed to fetch ' + lesson.file);
     const md = await res.text();
     const html = renderMarkdown(stripFrontmatter(md));

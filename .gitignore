@@ -1,0 +1,29 @@
+# Headless browser screenshots (dev only)
+web/.preview/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local notes (don't share refleksi pribadi by default)
+*-refleksi-saya.md
+*-private.md
+
+# Logs
+*.log

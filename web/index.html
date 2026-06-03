@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light" data-font-size="md">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Belajar Investasi — Reader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Early theme bootstrap — prevents flash, supports ?theme= URL param */
+    (function () {
+      var src = '';
+      var t = null;
+      try {
+        var p = new URLSearchParams(location.search);
+        t = p.get('theme');
+        if (t) src = 'url-search';
+      } catch (e) {}
+      if (!t) {
+        try {
+          var m = (location.hash || '').match(/theme=(light|dark)/);
+          if (m) { t = m[1]; src = 'url-hash'; }
+        } catch (e) {}
+      }
+      if (!t) {
+        try {
+          t = localStorage.getItem('invest.theme');
+          if (t) src = 'storage';
+        } catch (e) {}
+      }
+      if (!t) {
+        t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        src = 'os-pref';
+      }
+      document.documentElement.dataset.theme = t;
+      document.documentElement.dataset.themeSrc = src;
+      var f;
+      try { f = localStorage.getItem('invest.fontSize'); } catch (e) {}
+      document.documentElement.dataset.fontSize = f || 'md';
+    })();
+  </script>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__fill" id="scrollProgressFill"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <button class="icon-btn topbar__menu" id="sidebarToggle" aria-label="Buka navigasi" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="7" x2="21" y2="7"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="17" x2="21" y2="17"/>
+        </svg>
+      </button>
+
+      <a class="brand" href="#beranda" aria-label="Beranda">
+        <span class="brand__mark" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 20l6-10 4 6 6-12"/>
+          </svg>
+        </span>
+        <span class="brand__text">Belajar Invest</span>
+      </a>
+
+      <div class="topbar__spacer"></div>
+
+      <div class="topbar__actions">
+        <button class="icon-btn icon-btn--text" id="fontSizeBtn" aria-label="Ubah ukuran font">
+          <span class="font-icon"><span class="font-icon__a">A</span><span class="font-icon__a font-icon__a--lg">A</span></span>
+        </button>
+        <button class="icon-btn" id="themeBtn" aria-label="Ganti tema">
+          <svg class="theme-icon theme-icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="theme-icon theme-icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" aria-label="Daftar lesson">
+      <div class="sidebar__inner">
+        <div class="sidebar__header">
+          <p class="eyebrow">Kurikulum</p>
+          <h2 class="sidebar__title">Belajar Investasi dari Nol</h2>
+          <div class="overall-progress">
+            <div class="overall-progress__track">
+              <div class="overall-progress__fill" id="overallProgressFill"></div>
+            </div>
+            <p class="overall-progress__label" id="overallProgressLabel">0 dari 0 lesson dibaca</p>
+          </div>
+        </div>
+
+        <nav class="lesson-nav" id="lessonNav" aria-label="Navigasi lesson"></nav>
+
+        <div class="sidebar__footer">
+          <button class="reset-btn" id="resetProgressBtn" type="button">Reset progress</button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sidebar__scrim" id="sidebarScrim"></div>
+
+    <main class="reader" id="reader" tabindex="-1">
+      <div class="reader__inner">
+        <div class="lesson-meta" id="lessonMeta" hidden>
+          <p class="eyebrow" id="lessonEyebrow"></p>
+          <h1 class="lesson-title" id="lessonTitle"></h1>
+          <div class="lesson-stats" id="lessonStats"></div>
+        </div>
+
+        <article class="lesson-content" id="lessonContent" aria-live="polite"></article>
+
+        <nav class="lesson-pager" id="lessonPager" aria-label="Navigasi lesson sebelumnya / berikutnya"></nav>
+      </div>
+    </main>
+
+    <aside class="toc" id="toc" aria-label="Daftar isi lesson">
+      <div class="toc__inner">
+        <p class="eyebrow">Di lesson ini</p>
+        <div class="toc__list" id="tocList"></div>
+      </div>
+    </aside>
+  </div>
+
+  <template id="lesson-link-template">
+    <a class="lesson-link" href="#">
+      <span class="lesson-link__check" aria-hidden="true">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </span>
+      <span class="lesson-link__body">
+        <span class="lesson-link__number"></span>
+        <span class="lesson-link__title"></span>
+      </span>
+    </a>
+  </template>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+  <script src="lessons.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

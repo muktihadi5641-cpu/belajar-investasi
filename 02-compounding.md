@@ -67,7 +67,11 @@ Artinya:
 Contoh: Rp 10 juta di-compounding 10%/tahun selama 30 tahun:
 
 $$
-FV = 10\text{jt} \times (1{,}10)^{30} = 10\text{jt} \times 17{,}45 = \text{Rp } 174{,}5 \text{ juta}
+\begin{aligned}
+FV &= 10\,\text{jt} \times (1{,}10)^{30} \\
+   &= 10\,\text{jt} \times 17{,}45 \\
+   &= \text{Rp}\ 174{,}5\ \text{juta}
+\end{aligned}
 $$
 
 Kuncinya ada di **pangkat $n$**. Itulah yang bikin pertumbuhan jadi **eksponensial**, bukan linear.
@@ -162,16 +166,22 @@ $$
 Setor Rp 12 juta/tahun (Rp 1jt × 12) selama 10 tahun. Di akhir tahun ke-10 (usia 35), totalnya:
 
 $$
-FV_{35} = 12\text{jt} \times \frac{(1{,}10)^{10} - 1}{0{,}10}
-       = 12\text{jt} \times \frac{2{,}5937 - 1}{0{,}10}
-       = 12\text{jt} \times 15{,}937
-       = \text{Rp } 191\text{ juta}
+\begin{aligned}
+FV_{35} &= 12\,\text{jt} \times \frac{(1{,}10)^{10} - 1}{0{,}10} \\[4pt]
+        &= 12\,\text{jt} \times \frac{1{,}5937}{0{,}10} \\[4pt]
+        &= 12\,\text{jt} \times 15{,}937 \\[4pt]
+        &= \text{Rp}\ 191\ \text{juta}
+\end{aligned}
 $$
 
 Lalu Andi **berhenti setor**, tapi uangnya tetap di pasar dan tumbuh 10%/tahun selama 30 tahun lagi (usia 35 → 65). Sekarang pakai rumus simple compound:
 
 $$
-FV_{65} = 191\text{jt} \times (1{,}10)^{30} = 191\text{jt} \times 17{,}45 = \text{Rp } 3{,}33 \text{ miliar}
+\begin{aligned}
+FV_{65} &= 191\,\text{jt} \times (1{,}10)^{30} \\
+        &= 191\,\text{jt} \times 17{,}45 \\
+        &= \text{Rp}\ 3{,}33\ \text{miliar}
+\end{aligned}
 $$
 
 Total uang yang dia setor seumur hidup: **Rp 120 juta**.
@@ -181,9 +191,11 @@ Total uang yang dia setor seumur hidup: **Rp 120 juta**.
 Setor Rp 12 juta/tahun selama 30 tahun:
 
 $$
-FV_{65} = 12\text{jt} \times \frac{(1{,}10)^{30} - 1}{0{,}10}
-        = 12\text{jt} \times 164{,}49
-        = \text{Rp } 1{,}97 \text{ miliar}
+\begin{aligned}
+FV_{65} &= 12\,\text{jt} \times \frac{(1{,}10)^{30} - 1}{0{,}10} \\[4pt]
+        &= 12\,\text{jt} \times 164{,}49 \\
+        &= \text{Rp}\ 1{,}97\ \text{miliar}
+\end{aligned}
 $$
 
 Total uang yang dia setor seumur hidup: **Rp 360 juta**.

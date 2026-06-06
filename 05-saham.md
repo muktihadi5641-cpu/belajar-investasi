@@ -66,13 +66,13 @@ Profit dari memiliki saham datang dari **dua sumber paralel**:
 Kamu beli saham di harga X. Beberapa waktu kemudian, harganya jadi Y (lebih tinggi). Selisihnya = **capital gain**.
 
 $$
-\text{Capital Gain \%} = \frac{P_{jual} - P_{beli}}{P_{beli}} \times 100\%
+\text{Capital Gain} = \frac{P_\text{jual} - P_\text{beli}}{P_\text{beli}} \times 100\%
 $$
 
 Contoh: beli 100 lembar BBCA di Rp 9.000/lembar (modal Rp 900.000). Setahun kemudian harga jadi Rp 10.500/lembar. Capital gain:
 
 $$
-\frac{10.500 - 9.000}{9.000} \times 100\% = 16{,}67\%
+\frac{10{.}500 - 9{.}000}{9{.}000} \times 100\% = 16{,}67\%
 $$
 
 Atau total: $(10.500 - 9.000) \times 100 = \text{Rp } 150.000$.
@@ -84,10 +84,10 @@ Atau total: $(10.500 - 9.000) \times 100 = \text{Rp } 150.000$.
 Kalau perusahaan untung dan punya **kebijakan bagi dividen** (tidak semua perusahaan bagi), tiap tahun (atau kuartalan/semesteran) mereka transfer cash ke rekening pemegang saham.
 
 $$
-\text{Dividen yang kamu terima} = \text{Dividen per lembar} \times \text{Jumlah lembar yang kamu pegang}
+\text{Dividen diterima} = \text{Dividen per lembar} \times \text{Jumlah lembar}
 $$
 
-Contoh: BBCA bagi dividen Rp 200/lembar. Kamu pegang 100 lembar. Masuk ke rekeningmu: $200 \times 100 = \text{Rp } 20.000$.
+Contoh: BBCA bagi dividen Rp 200/lembar. Kamu pegang 100 lembar. Masuk ke rekeningmu: $200 \times 100 = \text{Rp}\ 20{.}000$.
 
 **Dividend yield** = dividen tahunan dibagi harga saham, sering dipakai untuk bandingkan saham yang fokus dividen:
 

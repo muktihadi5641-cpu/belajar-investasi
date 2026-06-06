@@ -231,10 +231,14 @@ Bagian $\dfrac{(1+r)^n - 1}{r}$ disebut **"annuity factor"** — angka pengali y
 
 Asumsi: taruh di reksadana campuran, return rata-rata 8%/tahun.
 
-Konversi ke per bulan: $r_{bulan} = 8\%/12 = 0{,}667\%$, $n = 5 \times 12 = 60$ bulan.
+Konversi ke per bulan: $r_\text{bulan} = 8\%/12 = 0{,}667\%$, $n = 5 \times 12 = 60$ bulan.
 
 $$
-PMT = \frac{200\text{jt} \times 0{,}00667}{(1{,}00667)^{60} - 1} = \frac{1{,}333 \text{jt}}{0{,}490} \approx \text{Rp } 2{,}72 \text{ juta/bulan}
+\begin{aligned}
+PMT &= \frac{200\,\text{jt} \times 0{,}00667}{(1{,}00667)^{60} - 1} \\[4pt]
+    &= \frac{1{,}333\,\text{jt}}{0{,}490} \\[4pt]
+    &\approx \text{Rp}\ 2{,}72\ \text{juta/bulan}
+\end{aligned}
 $$
 
 Jadi: untuk DP rumah Rp 200 jt dalam 5 tahun, kamu perlu nyisihin **~Rp 2,72 jt/bulan** ke reksadana campuran.
@@ -247,10 +251,14 @@ Kalau cuma bisa sisihin Rp 1,5 jt/bulan? Berarti ada 3 pilihan:
 
 ### Contoh: Pensiun Rp 5 miliar dalam 35 tahun
 
-Asumsi: di saham/reksadana saham, return 10%/tahun. $r_{bulan} = 0{,}833\%$, $n = 420$ bulan.
+Asumsi: di saham/reksadana saham, return 10%/tahun. $r_\text{bulan} = 0{,}833\%$, $n = 420$ bulan.
 
 $$
-PMT = \frac{5\text{M} \times 0{,}00833}{(1{,}00833)^{420} - 1} = \frac{41{,}67\text{jt}}{31{,}88} \approx \text{Rp } 1{,}31 \text{ juta/bulan}
+\begin{aligned}
+PMT &= \frac{5\,\text{M} \times 0{,}00833}{(1{,}00833)^{420} - 1} \\[4pt]
+    &= \frac{41{,}67\,\text{jt}}{31{,}88} \\[4pt]
+    &\approx \text{Rp}\ 1{,}31\ \text{juta/bulan}
+\end{aligned}
 $$
 
 Cuma Rp 1,3 juta/bulan untuk pensiun Rp 5 miliar?! Iya. **Karena waktu = 35 tahun**. Recall Lesson 02: waktu > jumlah.
@@ -258,7 +266,11 @@ Cuma Rp 1,3 juta/bulan untuk pensiun Rp 5 miliar?! Iya. **Karena waktu = 35 tahu
 Bandingkan kalau kamu mulai 15 tahun terlambat (sisa 20 tahun):
 
 $$
-PMT = \frac{5\text{M} \times 0{,}00833}{(1{,}00833)^{240} - 1} = \frac{41{,}67\text{jt}}{6{,}59} \approx \text{Rp } 6{,}32 \text{ juta/bulan}
+\begin{aligned}
+PMT &= \frac{5\,\text{M} \times 0{,}00833}{(1{,}00833)^{240} - 1} \\[4pt]
+    &= \frac{41{,}67\,\text{jt}}{6{,}59} \\[4pt]
+    &\approx \text{Rp}\ 6{,}32\ \text{juta/bulan}
+\end{aligned}
 $$
 
 Hampir 5x lipat per bulan untuk hasil yang sama. Itulah biaya menunda.

@@ -58,7 +58,7 @@ Jumlah pokok yang akan dikembalikan di jatuh tempo. Biasanya **Rp 1 juta** untuk
 
 Bunga yang dibayar entitas, dinyatakan sebagai **persen per tahun** dari nilai nominal.
 
-Contoh: ORI023 punya kupon **6,1% per tahun**. Pokok Rp 1 juta → bunga $1\text{jt} \times 6{,}1\% = \text{Rp } 61.000$ per tahun.
+Contoh: ORI023 punya kupon **6,1% per tahun**. Pokok Rp 1 juta → bunga $1\,\text{jt} \times 6{,}1\% = \text{Rp}\ 61.000$ per tahun.
 
 Kupon biasanya dibayar tiap bulan/kuartalan, dibagi rata.
 
@@ -92,7 +92,7 @@ Misal ORI023 punya kupon 6,1%. Pokok Rp 1jt. Bunga tahunan Rp 61.000.
 Sekarang yield:
 
 $$
-\text{Yield} = \frac{61.000}{950.000} \times 100\% = 6{,}42\%
+\text{Yield} = \frac{61{.}000}{950{.}000} \times 100\% = 6{,}42\%
 $$
 
 Yield naik karena harga turun. Tapi kupon-nya tetap **6,1%** dari nominal Rp 1jt.

@@ -176,7 +176,25 @@ function renderMarkdown(md) {
   // Pre-process custom syntax: ":::why title" blocks
   md = preprocessWhyBlocks(md);
   md = preprocessCallouts(md);
+
+  // Protect math blocks from marked.js mangling backslashes.
+  // Without this, "\\[4pt]" becomes "\[4pt]", "\,\text{}" becomes ",\text{}", etc.
+  const mathStash = [];
+  const stash = (content) => {
+    const i = mathStash.length;
+    mathStash.push(content);
+    return `@@MATH${i}MATH@@`;
+  };
+  // Display math: $$...$$
+  md = md.replace(/\$\$([\s\S]+?)\$\$/g, (m) => stash(m));
+  // Inline math: $...$ (avoid matching escaped \$ and double $$ which is already handled)
+  md = md.replace(/(?<![\\$])\$(?!\$)([^\n$]+?)(?<!\\)\$(?!\$)/g, (m) => stash(m));
+
   let html = marked.parse(md);
+
+  // Restore math blocks
+  html = html.replace(/@@MATH(\d+)MATH@@/g, (_, i) => mathStash[parseInt(i, 10)]);
+
   return html;
 }
 
